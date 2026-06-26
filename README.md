@@ -40,11 +40,13 @@ export AIRFLOW_HOME=~/airflow-tutorial/airflow_home
 ```bash
 source py_env/bin/activate
 export AIRFLOW_HOME="$PWD/airflow_home"
+export AIRFLOW__CORE__DAGS_FOLDER="$PWD/dags"
+export AIRFLOW__CORE__LOAD_EXAMPLES="False"
 
 airflow standalone
 ```
 
-Open http://localhost:8080 — admin credentials are printed in the terminal.
+Open http://localhost:8080 — login credentials are in `airflow_home/simple_auth_manager_passwords.json.generated` (username is `admin`).
 
 ## Project Structure
 
