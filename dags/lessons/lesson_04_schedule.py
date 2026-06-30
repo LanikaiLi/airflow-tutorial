@@ -10,7 +10,8 @@ from airflow.sdk import dag, task
 @dag(
     dag_id="lesson_04_schedule",
     start_date=datetime(2024, 1, 1),
-    schedule="@daily",  # 每天自动跑一次
+    #schedule="@daily",  # 每天自动跑一次
+    schedule="0 9 * * *",  # cron expression for scheduling, 9am utc every day
     catchup=False,      # catchup only works when schedule is set, it means to run all the missed scheduled runs from start_date
     tags=["lesson"],
 )
