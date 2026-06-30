@@ -10,7 +10,7 @@ from airflow.decorators import dag, task
 
 @dag(
     dag_id="lesson_01_hello",
-    start_date=datetime(2024, 1, 1),
+    start_date=datetime(2024, 1, 1), # 开始日期, 表示这个 DAG 从 2024 年 1 月 1 日开始执行
     schedule=None,  # 不自动定时跑，只在手动触发时运行
     catchup=False,  # 不补跑历史日期
     tags=["lesson"],
